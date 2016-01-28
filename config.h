@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Office Code Pro:pixelsize=19:antialias=true:autohint=true";
-static int borderpx = 2;
+static char font[] = "Office Code Pro:pixelsize=15:antialias=true:autohint=true";
+static int borderpx = 0;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
 static char stty_args[] = "stty raw -echo -iexten echonl";
