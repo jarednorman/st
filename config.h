@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Roboto Mono:pixelsize=12:antialias=false:autohint=true";
+static char font[] = "Office Code Pro:pixelsize=13:antialias=false:autohint=true";
 static int borderpx = 0;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
@@ -15,7 +15,7 @@ static char stty_args[] = "stty raw -echo -iexten echonl";
 static char vtiden[] = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 0.5;
+static float cwscale = 1.0;
 static float chscale = 1.0;
 
 /*
