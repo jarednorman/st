@@ -58,36 +58,49 @@ static char termname[] = "xterm-256color";
 
 static unsigned int tabspaces = 8;
 
-
-/* Terminal colors (16 first used in escape sequence) */
+// Base16 Bright dark - simple terminal color setup
+// Chris Kempson (http://chriskempson.com)
 static const char *colorname[] = {
-	/* Solarized Light */
-	"#eee8d5",  /*  0: black    */
-	"#dc322f",  /*  1: red      */
-	"#859900",  /*  2: green    */
-	"#b58900",  /*  3: yellow   */
-	"#268bd2",  /*  4: blue     */
-	"#d33682",  /*  5: magenta  */
-	"#2aa198",  /*  6: cyan     */
-	"#073642",  /*  7: white    */
-	"#fdf6e3",  /*  8: brblack  */
-	"#cb4b16",  /*  9: brred    */
-	"#93a1a1",  /* 10: brgreen  */
-	"#839496",  /* 11: bryellow */
-	"#657b83",  /* 12: brblue   */
-	"#6c71c4",  /* 13: brmagenta*/
-	"#586e75",  /* 14: brcyan   */
-	"#002b36",  /* 15: brwhite  */
+	/* Normal colors */
+	"#000000", /*  0: Base 00 - Black   */
+	"#fb0120", /*  1: Base 08 - Red     */
+	"#a1c659", /*  2: Base 0B - Green   */
+	"#fda331", /*  3: Base 0A - Yellow  */
+	"#6fb3d2", /*  4: Base 0D - Blue    */
+	"#d381c3", /*  5: Base 0E - Magenta */
+	"#76c7b7", /*  6: Base 0C - Cyan    */
+	"#e0e0e0", /*  7: Base 05 - White   */
+
+	/* Bright colors */
+	"#b0b0b0", /*  8: Base 03 - Bright Black */
+	"#fb0120", /*  9: Base 08 - Red          */
+	"#a1c659", /* 10: Base 0B - Green        */
+	"#fda331", /* 11: Base 0A - Yellow       */
+	"#6fb3d2", /* 12: Base 0D - Blue         */
+	"#d381c3", /* 13: Base 0E - Magenta      */
+	"#76c7b7", /* 14: Base 0C - Cyan         */
+	"#ffffff", /* 15: Base 05 - Bright White */
+
+	/* A few more colors */
+
+	"#fc6d24", /* 16: Base 09 */
+	"#be643c", /* 17: Base 0F */
+	"#303030", /* 18: Base 01 */
+	"#505050", /* 19: Base 02 */
+	"#d0d0d0", /* 20: Base 04 */
+	"#f5f5f5", /* 21: Base 06 */
+
+	[255] = 0,
+
+	[256] = "#e0e0e0", /* default fg: Base 05 */
+	[257] = "#000000", /* default bg: Base 00 */	
 };
 
+// Foreground, background and cursor
+static unsigned int defaultfg = 256;
+static unsigned int defaultbg = 257;
+static unsigned int defaultcs = 256;
 
-/*
- * Default colors (colorname index)
- * foreground, background, cursor
- */
-static unsigned int defaultfg = 12;
-static unsigned int defaultbg = 8;
-static unsigned int defaultcs = 14;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
