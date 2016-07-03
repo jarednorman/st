@@ -58,49 +58,48 @@ static char termname[] = "xterm-256color";
 
 static unsigned int tabspaces = 8;
 
-// Base16 Bright dark - simple terminal color setup
-// Chris Kempson (http://chriskempson.com)
+// Base16 Solarized light - simple terminal color setup
+// Ethan Schoonover (http://ethanschoonover.com/solarized)
 static const char *colorname[] = {
 	/* Normal colors */
-	"#000000", /*  0: Base 00 - Black   */
-	"#fb0120", /*  1: Base 08 - Red     */
-	"#a1c659", /*  2: Base 0B - Green   */
-	"#fda331", /*  3: Base 0A - Yellow  */
-	"#6fb3d2", /*  4: Base 0D - Blue    */
-	"#d381c3", /*  5: Base 0E - Magenta */
-	"#76c7b7", /*  6: Base 0C - Cyan    */
-	"#e0e0e0", /*  7: Base 05 - White   */
+	"#002b36", /*  0: Base 00 - Black   */
+	"#dc322f", /*  1: Base 08 - Red     */
+	"#859900", /*  2: Base 0B - Green   */
+	"#b58900", /*  3: Base 0A - Yellow  */
+	"#268bd2", /*  4: Base 0D - Blue    */
+	"#6c71c4", /*  5: Base 0E - Magenta */
+	"#2aa198", /*  6: Base 0C - Cyan    */
+	"#93a1a1", /*  7: Base 05 - White   */
 
 	/* Bright colors */
-	"#b0b0b0", /*  8: Base 03 - Bright Black */
-	"#fb0120", /*  9: Base 08 - Red          */
-	"#a1c659", /* 10: Base 0B - Green        */
-	"#fda331", /* 11: Base 0A - Yellow       */
-	"#6fb3d2", /* 12: Base 0D - Blue         */
-	"#d381c3", /* 13: Base 0E - Magenta      */
-	"#76c7b7", /* 14: Base 0C - Cyan         */
-	"#ffffff", /* 15: Base 05 - Bright White */
+	"#657b83", /*  8: Base 03 - Bright Black */
+	"#dc322f", /*  9: Base 08 - Red          */
+	"#859900", /* 10: Base 0B - Green        */
+	"#b58900", /* 11: Base 0A - Yellow       */
+	"#268bd2", /* 12: Base 0D - Blue         */
+	"#6c71c4", /* 13: Base 0E - Magenta      */
+	"#2aa198", /* 14: Base 0C - Cyan         */
+	"#fdf6e3", /* 15: Base 05 - Bright White */
 
 	/* A few more colors */
 
-	"#fc6d24", /* 16: Base 09 */
-	"#be643c", /* 17: Base 0F */
-	"#303030", /* 18: Base 01 */
-	"#505050", /* 19: Base 02 */
-	"#d0d0d0", /* 20: Base 04 */
-	"#f5f5f5", /* 21: Base 06 */
+	"#cb4b16", /* 16: Base 09 */
+	"#d33682", /* 17: Base 0F */
+	"#073642", /* 18: Base 01 */
+	"#586e75", /* 19: Base 02 */
+	"#839496", /* 20: Base 04 */
+	"#eee8d5", /* 21: Base 06 */
 
 	[255] = 0,
 
-	[256] = "#e0e0e0", /* default fg: Base 05 */
-	[257] = "#000000", /* default bg: Base 00 */	
+	[256] = "#586e75", /* default fg: Base 02 */
+	[257] = "#fdf6e3", /* default bg: Base 07 */	
 };
 
 // Foreground, background and cursor
 static unsigned int defaultfg = 256;
 static unsigned int defaultbg = 257;
 static unsigned int defaultcs = 256;
-
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
