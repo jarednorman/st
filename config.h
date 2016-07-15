@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Office Code Pro:pixelsize=13:antialias=false:autohint=true:weight=normal";
+static char font[] = "Office Code Pro:size=12:antialias=false:autohint=true:weight=normal";
 static int borderpx = 0;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
@@ -58,48 +58,31 @@ static char termname[] = "xterm-256color";
 
 static unsigned int tabspaces = 8;
 
-// Base16 Solarized light - simple terminal color setup
-// Ethan Schoonover (http://ethanschoonover.com/solarized)
+/* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* Normal colors */
-	"#002b36", /*  0: Base 00 - Black   */
-	"#dc322f", /*  1: Base 08 - Red     */
-	"#859900", /*  2: Base 0B - Green   */
-	"#b58900", /*  3: Base 0A - Yellow  */
-	"#268bd2", /*  4: Base 0D - Blue    */
-	"#6c71c4", /*  5: Base 0E - Magenta */
-	"#2aa198", /*  6: Base 0C - Cyan    */
-	"#93a1a1", /*  7: Base 05 - White   */
-
-	/* Bright colors */
-	"#657b83", /*  8: Base 03 - Bright Black */
-	"#dc322f", /*  9: Base 08 - Red          */
-	"#859900", /* 10: Base 0B - Green        */
-	"#b58900", /* 11: Base 0A - Yellow       */
-	"#268bd2", /* 12: Base 0D - Blue         */
-	"#6c71c4", /* 13: Base 0E - Magenta      */
-	"#2aa198", /* 14: Base 0C - Cyan         */
-	"#fdf6e3", /* 15: Base 05 - Bright White */
-
-	/* A few more colors */
-
-	"#cb4b16", /* 16: Base 09 */
-	"#d33682", /* 17: Base 0F */
-	"#073642", /* 18: Base 01 */
-	"#586e75", /* 19: Base 02 */
-	"#839496", /* 20: Base 04 */
-	"#eee8d5", /* 21: Base 06 */
-
-	[255] = 0,
-
-	[256] = "#586e75", /* default fg: Base 02 */
-	[257] = "#fdf6e3", /* default bg: Base 07 */	
+	/* Solarized Light */
+	"#eee8d5",  /*  0: black    */
+	"#dc322f",  /*  1: red      */
+	"#859900",  /*  2: green    */
+	"#b58900",  /*  3: yellow   */
+	"#268bd2",  /*  4: blue     */
+	"#d33682",  /*  5: magenta  */
+	"#2aa198",  /*  6: cyan     */
+	"#073642",  /*  7: white    */
+	"#fdf6e3",  /*  8: brblack  */
+	"#cb4b16",  /*  9: brred    */
+	"#93a1a1",  /* 10: brgreen  */
+	"#839496",  /* 11: bryellow */
+	"#657b83",  /* 12: brblue   */
+	"#6c71c4",  /* 13: brmagenta*/
+	"#586e75",  /* 14: brcyan   */
+	"#002b36",  /* 15: brwhite  */
 };
 
 // Foreground, background and cursor
-static unsigned int defaultfg = 256;
-static unsigned int defaultbg = 257;
-static unsigned int defaultcs = 256;
+static unsigned int defaultfg = 12;
+static unsigned int defaultbg = 8;
+static unsigned int defaultcs = 14;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
