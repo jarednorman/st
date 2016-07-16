@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Office Code Pro:size=12:antialias=false:autohint=true:weight=normal";
+static char font[] = "Office Code Pro:medium:size=12";
 static int borderpx = 0;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
