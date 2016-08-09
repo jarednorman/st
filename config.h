@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Office Code Pro:medium:size=12";
+static char font[] = "DejaVu Sans Mono:medium:pixelsize=12";
 static int borderpx = 0;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
