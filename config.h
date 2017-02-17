@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "DejaVu Sans Mono:medium:pixelsize=12";
+static char font[] = "Fira Mono:medium:size=14";
 static int borderpx = 0;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
@@ -60,29 +60,31 @@ static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* Solarized Light */
-	"#eee8d5",  /*  0: black    */
-	"#dc322f",  /*  1: red      */
-	"#859900",  /*  2: green    */
-	"#b58900",  /*  3: yellow   */
-	"#268bd2",  /*  4: blue     */
-	"#d33682",  /*  5: magenta  */
-	"#2aa198",  /*  6: cyan     */
-	"#073642",  /*  7: white    */
-	"#fdf6e3",  /*  8: brblack  */
-	"#cb4b16",  /*  9: brred    */
-	"#93a1a1",  /* 10: brgreen  */
-	"#839496",  /* 11: bryellow */
-	"#657b83",  /* 12: brblue   */
-	"#6c71c4",  /* 13: brmagenta*/
-	"#586e75",  /* 14: brcyan   */
-	"#002b36",  /* 15: brwhite  */
+	"#222222",
+	"#E84F4F",
+	"#B7CE42",
+	"#FEA63C",
+	"#66A9B9",
+	"#B7416E",
+	"#6D878D",
+	"#CCCCCC",
+	"#666666",
+	"#D23D3D",
+	"#BDE077",
+	"#FFE863",
+	"#AACCBB",
+	"#E16A98",
+	"#42717B",
+	"#FFFFFF",
+	[255] = 0,
+	[256] = "#CCCCCC",
+	[257] = "#111111"
 };
 
 // Foreground, background and cursor
-static unsigned int defaultfg = 12;
-static unsigned int defaultbg = 8;
-static unsigned int defaultcs = 14;
+static unsigned int defaultfg = 256;
+static unsigned int defaultbg = 257;
+static unsigned int defaultcs = 15;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
@@ -369,4 +371,3 @@ static Key key[] = {
 static uint selmasks[] = {
 	[SEL_RECTANGULAR] = Mod1Mask,
 };
-
