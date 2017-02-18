@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Fira Mono:medium:size=14";
+static char font[] = "Fira Mono:size=14";
 static int borderpx = 0;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
@@ -60,25 +60,25 @@ static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#222222",
-	"#E84F4F",
-	"#B7CE42",
-	"#FEA63C",
-	"#66A9B9",
-	"#B7416E",
-	"#6D878D",
-	"#CCCCCC",
-	"#666666",
-	"#D23D3D",
-	"#BDE077",
-	"#FFE863",
-	"#AACCBB",
-	"#E16A98",
-	"#42717B",
-	"#FFFFFF",
-	[255] = 0,
-	[256] = "#CCCCCC",
-	[257] = "#111111"
+  "#383838", /*  0 */
+  "#c51e41", /*  1 */
+  "#1c7a33", /*  2 */
+  "#b7630a", /*  3 */
+  "#2249a3", /*  4 */
+  "#8630b2", /*  5 */
+  "#08736d", /*  6 */
+  "#f0f0f0", /*  7 */
+  "#888888", /*  8 */
+  "#f5593f", /*  9 */
+  "#8fb530", /* 10 */
+  "#e6ad00", /* 11 */
+  "#0184bc", /* 12 */
+  "#f13c97", /* 13 */
+  "#00c69b", /* 14 */
+  "#bfbfbf", /* 15 */
+  [255] = 0,
+  [256] = "#555555",
+  [257] = "#ffffff"
 };
 
 // Foreground, background and cursor
