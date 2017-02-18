@@ -60,31 +60,29 @@ static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  "#383838", /*  0 */
-  "#c51e41", /*  1 */
-  "#1c7a33", /*  2 */
-  "#b7630a", /*  3 */
-  "#2249a3", /*  4 */
-  "#8630b2", /*  5 */
-  "#08736d", /*  6 */
-  "#f0f0f0", /*  7 */
-  "#888888", /*  8 */
-  "#f5593f", /*  9 */
-  "#8fb530", /* 10 */
-  "#e6ad00", /* 11 */
-  "#0184bc", /* 12 */
-  "#f13c97", /* 13 */
-  "#00c69b", /* 14 */
-  "#bfbfbf", /* 15 */
-  [255] = 0,
-  [256] = "#555555",
-  [257] = "#ffffff"
+	/* Solarized Light */
+	"#eee8d5",  /*  0: black    */
+	"#dc322f",  /*  1: red      */
+	"#859900",  /*  2: green    */
+	"#b58900",  /*  3: yellow   */
+	"#268bd2",  /*  4: blue     */
+	"#d33682",  /*  5: magenta  */
+	"#2aa198",  /*  6: cyan     */
+	"#073642",  /*  7: white    */
+	"#fdf6e3",  /*  8: brblack  */
+	"#cb4b16",  /*  9: brred    */
+	"#93a1a1",  /* 10: brgreen  */
+	"#839496",  /* 11: bryellow */
+	"#657b83",  /* 12: brblue   */
+	"#6c71c4",  /* 13: brmagenta*/
+	"#586e75",  /* 14: brcyan   */
+	"#002b36",  /* 15: brwhite  */
 };
 
 // Foreground, background and cursor
-static unsigned int defaultfg = 256;
-static unsigned int defaultbg = 257;
-static unsigned int defaultcs = 15;
+static unsigned int defaultfg = 12;
+static unsigned int defaultbg = 8;
+static unsigned int defaultcs = 14;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
@@ -371,3 +369,4 @@ static Key key[] = {
 static uint selmasks[] = {
 	[SEL_RECTANGULAR] = Mod1Mask,
 };
+
