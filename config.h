@@ -60,44 +60,28 @@ static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#000000", /* color base00 */
-	"#fb0120", /* color base08 */
-	"#a1c659", /* color base0B */
-	"#fda331", /* color base0A */
-	"#6fb3d2", /* color base0D */
-	"#d381c3", /* color base0E */
-	"#76c7b7", /* color base0C */
-	"#e0e0e0", /* color base05 */
-
-	/* 8 bright colors */
-	"#b0b0b0", /* color base03 */
-	"#fb0120", /* color base08 */
-	"#a1c659", /* color base0B */
-	"#fda331", /* color base0A */
-	"#6fb3d2", /* color base0D */
-	"#d381c3", /* color base0E */
-	"#76c7b7", /* color base0C */
-	"#ffffff", /* color base07 */
-
-	/* additional colors */
-	"#fc6d24", /* color base09 */
-	"#be643c", /* color base0F */
-	"#303030", /* color base01 */
-	"#505050", /* color base02 */
-	"#d0d0d0", /* color base04 */
-	"#f5f5f5", /* color base06 */
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#e0e0e0", /* color base05 */
-	"#000000", /* color base00 */
+  "#eee8d5",  /*  0: black    */
+  "#dc322f",  /*  1: red      */
+  "#859900",  /*  2: green    */
+  "#b58900",  /*  3: yellow   */
+  "#268bd2",  /*  4: blue     */
+  "#d33682",  /*  5: magenta  */
+  "#2aa198",  /*  6: cyan     */
+  "#073642",  /*  7: white    */
+  "#fdf6e3",  /*  8: brblack  */
+  "#cb4b16",  /*  9: brred    */
+  "#93a1a1",  /* 10: brgreen  */
+  "#839496",  /* 11: bryellow */
+  "#657b83",  /* 12: brblue   */
+  "#6c71c4",  /* 13: brmagenta*/
+  "#586e75",  /* 14: brcyan   */
+  "#002b36",  /* 15: brwhite  */
 };
 
 // Foreground, background and cursor
-static unsigned int defaultfg = 7;
-static unsigned int defaultbg = 0;
-static unsigned int defaultcs = 7;
+static unsigned int defaultfg = 12;
+static unsigned int defaultbg = 8;
+static unsigned int defaultcs = 14;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
