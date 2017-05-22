@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Input:size=13";
+static char font[] = "Input:size=12";
 static int borderpx = 0;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
